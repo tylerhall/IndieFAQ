@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^a\/([0-9]+)\/.* article.php?id=$1 [N,L]
+RewriteRule ^s\/([0-9]+)\/.* section.php?id=$1 [N,L]
