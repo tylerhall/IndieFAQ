@@ -8,12 +8,13 @@ I ended up spending half a day creating my own FAQ site and this is the result. 
 INSTALL
 -------
 
- * Upload the files into onto your PHP webserver
- * Create a MySQL database and import `Database.sql`
- * Rename `includes/class.config.php.SAMPLE` to `includes/class.config.php`
+ * Upload the files onto your favorite PHP webserver.
+ * Create a MySQL database and import `Database.sql`.
+ * Rename `includes/class.config.php.SAMPLE` to `includes/class.config.php`.
  * Edit `includes/class.config.php` and add your website's domain name to the `$productionServers` array at the top of the file.
  * Then, fill in your database details and admin password in the `prodiction()` method half way down the file.
- * You're finished. You can add/edit support articles via `admin.php`. For the time being, you'll have to add support sections via your favorite MySQL database client.
+ * You'll want to edit the HTML inside the `/inc/` directory to add your company's name and contact info.
+ * That's it. You can add/edit support articles via `admin.php`. For the time being, you'll have to add support sections via your favorite MySQL database client.
 
 LICENSE
 -------
