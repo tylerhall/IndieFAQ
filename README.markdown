@@ -1,7 +1,7 @@
 IndieFAQ
 =========
 
-So I run my own, small software company and needed to put together a help/FAQ site for my users. I wanted something clean and easy to manage, yet customizable. None of the existing FAQ web apps quite fit my needs. And I was trying to avoid using a pay-for solution such as ZenDesk, UserVoice, or Tender. (Believe it or not, the folks at Tender were some of the worst customer service I've ever dealt with.)
+So I run my own, [small software company](http://clickontyler.com) and needed to put together a help/FAQ site for my users. I wanted something clean and easy to manage, yet customizable. None of the existing FAQ web apps quite fit my needs. And I was trying to avoid using a pay-for solution such as [ZenDesk](http://www.zendesk.com/), [UserVoice](http://www.uservoice.com/), or [Tender](http://tenderapp.com/). (Believe it or not, the folks at Tender were some of the worst customer service I've ever dealt with.)
 
 I ended up spending half a day creating my own FAQ site and this is the result. It displays Markdown formatted support articles, categorized, and searchable. The HTML is based on [Bootstrap](http://twitter.github.com/bootstrap/) and the PHP is from [the Simple PHP Framework](https://github.com/tylerhall/simple-php-framework/). You can [view a demo here](http://support.clickontyler.com).
 
