@@ -3,7 +3,7 @@
 ?>
 
 <h3>Search</h3>
-<form action="search.php" method="get">
+<form action="/search.php" method="get">
 	<input type="text" name="q" id="q" value="">
 </form>
 
