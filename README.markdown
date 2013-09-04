@@ -1,19 +1,20 @@
 IndieFAQ
 =========
 
-So I run my own, small software company and needed to put together a help/FAQ site for my users. I wanted something clean and easy to manage, yet customizable. None of the existing FAQ web apps quite fit my needs. And I was trying to avoid using a pay-for solution such as ZenDesk, UserVoice, or Tender. (Believe it or not, the folks at Tender were some of the worst customer service I've ever dealt with.)
+So I run my own, [small software company](http://clickontyler.com) and needed to put together a help/FAQ site for my users. I wanted something clean and easy to manage, yet customizable. None of the existing FAQ web apps quite fit my needs. And I was trying to avoid using a pay-for solution such as [ZenDesk](http://www.zendesk.com/), [UserVoice](http://www.uservoice.com/), or [Tender](http://tenderapp.com/). (Believe it or not, the folks at Tender were some of the worst customer service I've ever dealt with.)
 
 I ended up spending half a day creating my own FAQ site and this is the result. It displays Markdown formatted support articles, categorized, and searchable. The HTML is based on [Bootstrap](http://twitter.github.com/bootstrap/) and the PHP is from [the Simple PHP Framework](https://github.com/tylerhall/simple-php-framework/). You can [view a demo here](http://support.clickontyler.com).
 
 INSTALL
 -------
 
- * Upload the files into onto your PHP webserver
- * Create a MySQL database and import `Database.sql`
- * Rename `includes/class.config.php.SAMPLE` to `includes/class.config.php`
+ * Upload the files onto your favorite PHP webserver.
+ * Create a MySQL database and import `Database.sql`.
+ * Rename `includes/class.config.php.SAMPLE` to `includes/class.config.php`.
  * Edit `includes/class.config.php` and add your website's domain name to the `$productionServers` array at the top of the file.
- * Then, fill in your database details and admin password in the `prodiction()` method half way down the file.
- * You're finished. You can add/edit support articles via `admin.php`. For the time being, you'll have to add support sections via your favorite MySQL database client.
+ * Then, fill in your database details and admin password in the `production()` method half way down the file.
+ * You'll want to edit the HTML inside the `/inc/` directory to add your company's name and contact info.
+ * That's it. You can add/edit support articles via `admin.php`. For the time being, you'll have to add support sections via your favorite MySQL database client.
 
 LICENSE
 -------
