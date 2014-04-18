@@ -29,9 +29,21 @@
             parent::__construct('kb_sections', array('title'), $id);
         }
 
-		public function articles()
+		public function alphabeticalArticles()
 		{
-			$articles = DBObject::glob('KBArticle', "SELECT * FROM kb_articles WHERE section_id = '{$this->id}' ORDER BY views DESC, dt_modified DESC");
+			$articles = DBObject::glob('KBArticle', "SELECT * FROM kb_articles WHERE section_id = '{$this->id}' AND published = '1' ORDER BY pinned DESC, title ASC, dt_modified DESC");
+			return $articles;			
+		}
+
+		public function mostRecentArticles()
+		{
+			$articles = DBObject::glob('KBArticle', "SELECT * FROM kb_articles WHERE section_id = '{$this->id}' AND published = '1' ORDER BY pinned DESC, dt_modified DESC");
+			return $articles;			
+		}
+
+		public function mostPopularArticles()
+		{
+			$articles = DBObject::glob('KBArticle', "SELECT * FROM kb_articles WHERE section_id = '{$this->id}' AND published = '1' ORDER BY pinned DESC, views DESC, dt_modified DESC");
 			return $articles;			
 		}
 	}

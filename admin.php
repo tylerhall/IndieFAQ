@@ -239,7 +239,7 @@
                         </div>
                         <div class="bd">
 							<form action="admin.php" method="POST" accept-charset="utf-8">
-								<p><label for="title">Title</label> <input type="text" name="title" id="title" value="<?PHP echo $title;?>" class="text"></p>
+								<p><label for="title">Title</label> <input type="text" name="title" id="title" value="<?PHP echo htmlspecialchars($title);?>" class="text"></p>
 								<p><label for="slug">Article Slug</label> <input type="text" name="slug" id="slug" value="<?PHP echo $slug;?>" class="text"></p>
 								<p>
 									<label for="body">Article Body</label>

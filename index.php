@@ -1,7 +1,7 @@
 <?PHP
 	require 'includes/master.inc.php';
 	
-	$sections = DBObject::glob('KBSection', "SELECT * FROM kb_sections ORDER BY title");
+	$sections = DBObject::glob('KBSection', "SELECT * FROM kb_sections ORDER BY sort, title");
 	$sections = array_values($sections);
 	
 	$title = 'Click On Tyler Support';
@@ -12,7 +12,7 @@
           <div class="span10">
 			<?PHP foreach($sections as $s) : ?>
 			<h2><a href="/s/<?PHP echo $s->id; ?>/"><?PHP echo $s->title; ?></a></h2>
-			<?PHP $full_articles = $s->articles(); ?>
+			<?PHP $full_articles = $s->mostPopularArticles(); ?>
 			<?PHP $articles = array_slice($full_articles, 0, 5); ?>
 			<ul>
 				<?PHP foreach($articles as $a) : ?>
